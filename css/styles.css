@@ -1,0 +1,264 @@
+/*/
+	Eric Davis
+	09/22/2023
+	styles.css
+*/
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, section, figure, figcaption, article { 
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* General Styles */
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.container {
+	margin: 0;
+	padding: 0 0.5rem;
+}
+
+p {
+	font-family: 'Oswald', sans-serif;
+}
+
+/* Breakpoints */
+
+/* Print */
+@media print {
+	
+}
+
+/* Extra small */
+
+/* Small */
+@media only screen and (min-width: 576px) {
+	
+	.container {
+		margin: 0 3rem;		
+	}
+	
+	.hero-content {
+		top: 60%;
+	}
+}
+
+/* Medium */
+@media only screen and (min-width: 768px) {
+	.btn {
+		display: none !important;
+	}
+	
+	.navbar .links {
+		display: flex !important;
+	}
+}
+
+/* Large */
+@media only screen and (min-width: 992px) {
+	
+}
+
+/* Extra large */
+@media only screen and (min-width: 1200px) {
+	
+	.container {
+		max-width: 1366px;
+		margin: auto;
+	}
+}
+
+/* Nav Styles */
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	position: fixed;
+    z-index: 2;
+}
+
+
+/* Navbar Styles */
+.navbar {
+	height: 15vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .brick-wall {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navbar .brick-gradient {
+	position: absolute;
+	z-index: -1;
+    height: 16vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.navbar .logo-container {
+	height: 7.5rem;
+	width: 7.5rem;
+}
+
+.navbar .logo-container .logo {
+	object-fit: cover;
+}
+
+.navbar .links {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	gap: 2rem;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: .15rem;
+	font-weight: 600;
+	text-shadow: yellow 1px 0 10px;
+}
+
+.navbar .links a {
+	color: white;
+	transition: .5s ease-in-out;
+}
+
+.navbar .links a:hover {
+	color: yellow;
+}
+
+.btn {
+	display: flex;
+	position: relative;
+	z-index: 2;
+	border: none;
+	background-color: white;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 1.2rem;
+	background: transparent;
+}
+
+
+.btn .line {
+	border-radius: 5px;
+	height: 3px;
+	background-color: white;
+}
+
+.btn .line:nth-child(1) {
+	width: 4rem
+}
+.btn .line:nth-child(2) {
+	width: 3rem
+}
+.btn .line:nth-child(3) {
+	width: 2rem
+}
+
+/* Header Styles */
+
+.hero {
+	position: relative;
+	height: 85vh;
+}
+
+.hero-content {
+	position: absolute;
+    z-index: 1;
+    color: white;
+    top: 45%;
+	font-family: 'Lobster', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 1.5em;
+	width: 100%;
+}
+
+.hero-img-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hero-img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.gradient-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgb(255,255,255);
+	background: linear-gradient(270deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+/* Main Styles */
+.section-1 {
+	height: 500px;
+	width: 100%;
+	background-color: gray;
+}
+
+.section-2 {
+	height: 500px;
+	width: 100%;
+	background-color: tan;
+}
+
+/* Comedians styles */
+#comedian-page .brick-wall {
+	position: fixed;
+}
+
+.comedians {
+	display: grid;
+}
+
+.comedian-card {
+	box-shadow: purple 1px 0 10px;
+	background-color: #00000050;
+}
+
+.comedian-card h2, p {
+	color: white;
+}
+
+/* Footer Styles */
+footer p {
+	float: left;
+}
+
+footer a {
+	clear: left;
+}
