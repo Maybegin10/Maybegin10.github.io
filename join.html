@@ -12,9 +12,9 @@
 	<script src="js/main.js"></script>
 	<link rel="icon" type="image/x-icon" href="images/d&fcc-logo.png">
 </head>
-<body>
-	<nav id="nav" class="hidden">
-		<ul class="links">
+<body id="join-page">
+	<nav id="nav" class="mobile-nav">
+		<ul id="menu-links" class="links">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="shows-podcasts.html">Shows & Podcasts</a></li>
 			<li><a href="about.html">About</a></li>
@@ -24,7 +24,6 @@
 	
 	<div class="navbar container">
 		<img class="brick-wall" src="images/brick-wall.jpg" alt="A brick wall">
-		<div class="brick-gradient"></div>
 		<div class="logo-container">
 			<a href="index.html"><img class="logo" src="images/d&fcc-logo.png" alt="The Davis & Field Comedy Club Logo"></a>
 		</div>
@@ -34,7 +33,7 @@
 			<li><a href="about.html">About</a></li>
 			<li><a href="comedians.html">Comedians</a></li>
 		</ul>
-		<button class="btn">
+		<button id="hamburger" class="">
 			<span class="line"></span>
 			<span class="line"></span>
 			<span class="line"></span>
@@ -42,25 +41,67 @@
 	</div>
 
 	<header>
-		<h1>Davis & Field Comedy</h1>
-		<h2>No Holds Barred!</h2>
 	</header>
 	
 	 <!--To hold the main content of the webpage: The Info about the comedy club--> 
 	<main>
-		<div id="container">
-			<ol>
-				<li>join the show - comedian</li>
-				<li>join the podcast - comedian</li>
-				<li>join the crew</li>
-			</ol>
-			
-			<ul>
-				<li>open show slots</li>
-				<li>open podcast slots</li>
-				<li>availble positions</li>
-			</ul>
-		</div>
+		<section class="container">
+			<div class="lists">
+				<ol class="list">
+					<li>join the show - comedian</li>
+					<li>join the podcast - comedian</li>
+					<li>join the crew</li>
+				</ol>
+				
+				<ul class="list">
+					<li>open show slots</li>
+					<li>open podcast slots</li>
+					<li>availble positions</li>
+				</ul>
+			</div>
+		</section>
+		<section class="boxes">
+			<div class="container">
+				<h1 class="title">Want to join the show? Lets get in touch!</h1>
+				<article class="box">
+				<!-- <h2>Complete the form below to begin your free trial.</h2> --> 
+				 <form class="form">
+					<fieldset class="contact-info">
+						<legend>Contact Information</legend>
+						<label for="firstName">First Name:</label>
+						<input type="text" name="firstName" id="firstName" required>
+						
+						<label for="lastName">Last Name:</label> 
+						<input type="text" name="lastName" id="lastName" required>
+						
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" required>
+						
+						<label for="phone">Phone:</label>
+						<input type="tel" id="phone" name="phone" required>
+					</fieldset>
+					
+					<fieldset>
+						<legend>What would you like to be a part of?</legend>
+						<select name="position" id="position" required> 
+							<option value="">Select One</option>
+							<option value="show">Show</option>
+							<option value="podcast">Podcast</option>
+							<option value="crew">Crew</option>
+						</select>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Any Additional Information?</legend>
+						<textarea name="questions" rows="5" cols="35"></textarea>
+					</fieldset>
+					
+					<input type="submit" value="Submit" class="submit-btn">
+					
+				</form>
+				</article>
+			</div>
+		</section>
 	</main>
 	
 	<footer>

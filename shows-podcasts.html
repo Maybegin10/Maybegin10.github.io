@@ -12,9 +12,9 @@
 	<script src="js/main.js"></script>
 	<link rel="icon" type="image/x-icon" href="images/d&fcc-logo.png">
 </head>
-<body>
-	<nav id="nav" class="hidden">
-		<ul class="links">
+<body id="shows-podcasts-page">
+	<nav id="nav" class="mobile-nav">
+		<ul id="menu-links" class="links">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="join.html">Join</a></li>
@@ -24,7 +24,6 @@
 	
 	<div class="navbar container">
 		<img class="brick-wall" src="images/brick-wall.jpg" alt="A brick wall">
-		<div class="brick-gradient"></div>
 		<div class="logo-container">
 			<a href="index.html"><img class="logo" src="images/d&fcc-logo.png" alt="The Davis & Field Comedy Club Logo"></a>
 		</div>
@@ -34,7 +33,7 @@
 			<li><a href="join.html">Join</a></li>
 			<li><a href="comedians.html">Comedians</a></li>
 		</ul>
-		<button class="btn">
+		<button id="hamburger" class="">
 			<span class="line"></span>
 			<span class="line"></span>
 			<span class="line"></span>
@@ -42,13 +41,11 @@
 	</div>
 
 	<header>
-		<h1>Davis & Field Comedy</h1>
-		<h2>No Holds Barred!</h2>
 	</header>
 	
 	 <!--To hold the main content of the webpage: The Info about the comedy club--> 
 	<main>
-		<div id="container">
+		<div class="container">
 			<ol>
 				<li>Buy tickets</li>
 				<li>upcoming shows</li>
@@ -60,6 +57,58 @@
 				<li>new talent</li>
 				<li>want to join? - link to page</li>
 			</ul>
+		</div>
+		
+		<div class="boxes">
+			<div class="container">
+				<article class="box">
+					<table><!-- Start Table -->
+						<caption>Entertainment Schedule</caption>
+						<tr><!-- Row 1 -->
+							<th>Entertainment</th>
+							<th>Days</th>
+							<th>Times</th>
+							<th>Place</th>
+							<th>Price</th>
+						</tr>
+						<tr><!-- Row 2 -->
+							<td>Comedy Shows</td>
+							<td>Fri, Sat</td>
+							<td>6:00pm-10:00pm</td>
+							<td>225 College Park Dr, Weatherford, TX 76086</td>
+							<td>$20</td>
+						</tr>
+						<tr><!-- Row 3 -->
+							<td>Podcasts</td>
+							<td>Mon, Tue</td>
+							<td>12:00pm-6:00pm</td>
+							<td>Our Website</td>
+							<td>Free</td>
+						</tr>
+						<tr><!-- Row 4 -->
+							<td>Improvisation</td>
+							<td>Thu</td>
+							<td>6:00pm-10:00pm</td>
+							<td>225 College Park Dr, Weatherford, TX 76086</td>
+							<td>$15</td>
+						</tr>
+						<tr><!-- Row 5 -->
+							<td>Music</td>
+							<td>Wed</td>
+							<td>6:00pm-10:00pm</td>
+							<td>225 College Park Dr, Weatherford, TX 76086</td>
+							<td>$15</td>
+						</tr>
+						<tr><!-- Row 7 -->
+							<td>Other</td>
+							<td>Mon-Tue</td>
+							<td>6:00pm-10:00pm</td>
+							<td>225 College Park Dr, Weatherford, TX 76086</td>
+							<td>$15</td>
+						</tr>
+					</table> <!-- End Table-->
+				</article>
+			</div>
 		</div>
 	</main>
 	

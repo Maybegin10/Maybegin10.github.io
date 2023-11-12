@@ -32,6 +32,21 @@ p {
 	font-family: 'Oswald', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: white;
+}
+
+.boxes {
+	display: flex;
+    max-width: 1366px;
+	margin: auto;
+}
+
+.box {
+	box-shadow: purple 1px 0 10px;
+	background-color: #fff;
+}
+
 /* Breakpoints */
 
 /* Print */
@@ -55,7 +70,7 @@ p {
 
 /* Medium */
 @media only screen and (min-width: 768px) {
-	.btn {
+	#hamburger {
 		display: none !important;
 	}
 	
@@ -79,7 +94,7 @@ p {
 }
 
 /* Nav Styles */
-.hidden {
+.mobile-nav {
 	display: none;
 }
 
@@ -91,7 +106,6 @@ p {
 	position: fixed;
     z-index: 2;
 }
-
 
 /* Navbar Styles */
 .navbar {
@@ -153,7 +167,7 @@ p {
 	color: yellow;
 }
 
-.btn {
+#hamburger {
 	display: flex;
 	position: relative;
 	z-index: 2;
@@ -166,21 +180,28 @@ p {
 }
 
 
-.btn .line {
+#hamburger span {
 	border-radius: 5px;
 	height: 3px;
 	background-color: white;
+	width: 2rem;
+	transition: .25s ease-in-out;
 }
 
-.btn .line:nth-child(1) {
-	width: 4rem
+#hamburger.open span:nth-child(1) {
+  transform: rotate(-45deg) translateY(10px);
+  transform: traslateX(1rem);
 }
-.btn .line:nth-child(2) {
-	width: 3rem
+
+#hamburger.open span:nth-child(2) {
+	opacity: 0;
 }
-.btn .line:nth-child(3) {
-	width: 2rem
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(45deg) translateY(-10px);
+   transform: traslateX(-1rem);
 }
+
 
 /* Header Styles */
 
@@ -192,7 +213,6 @@ p {
 .hero-content {
 	position: absolute;
     z-index: 1;
-    color: white;
     top: 45%;
 	font-family: 'Lobster', sans-serif;
     letter-spacing: .2rem;
@@ -237,22 +257,66 @@ p {
 }
 
 /* Comedians styles */
-#comedian-page .brick-wall {
+#comedian-page .brick-wall, #join-page .brick-wall, #shows-podcasts-page .brick-wall {
 	position: fixed;
 }
 
-.comedians {
-	display: grid;
-}
-
-.comedian-card {
-	box-shadow: purple 1px 0 10px;
-	background-color: #00000050;
-}
-
-.comedian-card h2, p {
+/* Join styles */
+.list {
 	color: white;
 }
+
+.form {
+	padding: 5%;
+}
+
+fieldset {
+	border: none;
+}
+
+.contact-info {
+	display: inline-grid;
+}
+
+input, legend, textarea, select, label {
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 1rem;
+}
+
+input, textarea, select {
+	box-shadow: purple 1px 0 10px;
+	border: solid 1px purple;
+}
+
+/* shows-podcasts-page styles */
+caption, th {
+	font-family: 'Lobster', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 1.5em;
+}
+
+table {
+	border: 1px solid purple;
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 100%;
+}
+
+th, td {
+		border: 1px solid purple;
+		padding: 1%;		
+	}
+	
+	
+	td {
+		font-family: 'Oswald', sans-serif;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: purple;
+		color: white;
+	}
+	
 
 /* Footer Styles */
 footer p {
