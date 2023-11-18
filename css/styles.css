@@ -38,8 +38,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .boxes {
 	display: flex;
-    max-width: 1366px;
-	margin: auto;
+    /* max-width: 1366px;
+	margin: auto; */
+	justify-content: center;
 }
 
 .box {
@@ -76,6 +77,10 @@ h1, h2, h3, h4, h5, h6 {
 	
 	.navbar .links {
 		display: flex !important;
+	}
+	
+	.footer-items {
+		flex-direction: row !important;
 	}
 }
 
@@ -319,10 +324,30 @@ th, td {
 	
 
 /* Footer Styles */
-footer p {
-	float: left;
+footer {
+	min-height: 2.5rem;
+	background-color: #000;
 }
 
-footer a {
-	clear: left;
+.footer-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+footer p, footer a {
+	color: white;
+	margin: 0;
+}
+
+.yt-logo {
+	height: 2rem;
+	width: 3.1rem;
+}
+
+.fb-logo {
+	height: 2rem;
+	width: 2rem;
 }
